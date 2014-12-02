@@ -1,14 +1,58 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>BMJ Technology</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>BMJ Technology</title>
+<link rel="shortcut icon"
+	href="http://resources.bmj.com/repository/images/favicon.ico" />
+<!-- Bootstrap Core CSS -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet"
+	type="text/css">
+<!-- CSS -->
+<link href="assets/css/bmj.css" rel="stylesheet" type="text/css">
+<link href="assets/css/google.fonts.css" rel="stylesheet"
+	type="text/css">
+<link href="assets/css/jquery.fancybox.css" rel="stylesheet"
+	type="text/css">
+<link href="assets/css/animate.css" rel="stylesheet" type="text/css">
+<link href="assets/css/animation-icons.css" rel="stylesheet"
+	type="text/css">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet"
+	type="text/css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="libs/js/html5shiv.min.js"></script>
+        <script src="libs/js/respond.min.js"></script>
+    <![endif]-->
+<script src="libs/js/modernizr-2.6.2.min.js"></script>
+<script src="libs/js/jquery.min.js"></script>
+<script src="libs/js/bootstrap.min.js"></script>
+<script src="libs/js/jquery-easing-min.js"></script>
+<script src="libs/js/jquery.fancybox.js?v=2.1.5"></script>
+<script src="libs/js/jquery.fancybox-media.js?v=1.0.6"></script>
+<script src="libs/js/queryLoader2.js"></script>
+<script src="libs/js/nimble.js"></script>
+<script src="libs/js/waypoints.js"></script>
+<script src="libs/js/counters.js"></script>
+<script src="libs/js/angular.min.js"></script>
+<script src="libs/js/angular-route.min.js"></script>
 </head>
-<body>
-<p>Coming at you from the repo: <a href="https://github.com/BMJ-Ltd/BMJ-Ltd.github.io">BMJ-Ltd/BMJ-Ltd.github.io</a></p>
-<p>Twitter <a href="https://www.twitter.com/BMJTech">@BMJTech</a></p>
-<p>Blog <a href="http://blogs.bmj.com/technology">http://blogs.bmj.com/technology</a>
-<p>Jobs <a href="https://www.jobtrain.co.uk/BMJ/">https://www.jobtrain.co.uk/BMJ</a>
-<p>Living Style guide. CSS standards for the BMJ. <a href="http://technology.bmj.com/living-style-guide/">http://technology.bmj.com/living-style-guide/</a></p>
-<p>We need a link from the BMJ Recruitment page <a href="http://www.bmj.com/company/work-at-bmj/">http://www.bmj.com/company/work-at-bmj/</a></p>
-  
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"
+	data-ng-app="bmjTech">
+	<!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->	
+	<!-- content here -->
+	<div data-ng-include="'templates/header.html'"></div>
+	<div data-ng-view></div>
+	<div data-ng-include="'templates/footer.html'"></div>
+
+	<!-- javascripts here -->
+	<script src="common/js/main.js"></script>
 </body>
 </html>
