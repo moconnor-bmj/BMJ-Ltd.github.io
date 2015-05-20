@@ -1,0 +1,335 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>BMJ JobReviews &#8211; BMJ Technology</title>
+<meta name="description" content="The reasons behind this project, how we implemented it and what is next">
+<meta name="keywords" content="Google, blog, BMJ JobReviews, architecture">
+
+  
+
+
+
+
+
+<link rel="canonical" href="http://technology.bmj.com/bmj-jobreviews/">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://technology.bmj.com/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://technology.bmj.com/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://technology.bmj.com/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://technology.bmj.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<!-- For original favicons: -->
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://resources.bmj.com/repository/images/apple-touch-icon-precomposed-60.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://resources.bmj.com/repository/images/apple-touch-icon-precomposed-76.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://resources.bmj.com/repository/images/apple-touch-icon-precomposed-120.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://resources.bmj.com/repository/images/apple-touch-icon-precomposed-152.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://technology.bmj.com/" class="site-title"><img src="http://technology.bmj.com/images/bmj.png" alt="BMJ"></a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+				    
+				        
+				    
+				    <li><a href="http://technology.bmj.com/about/" >About</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="http://technology.bmj.com/posts/" >Blog</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="http://technology.bmj.com/values/" >Our Values</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="http://technology.bmj.com/news/" >News</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="http://technology.bmj.com/jobs/" >Work with us</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="http://technology.bmj.com/contact/" >Contact</a></li>
+				
+				    
+				        
+				    
+				    <li><a href="http://technology.bmj.com/jobs/" >Work with us</a></li>
+				
+				    
+				        
+				        
+				    <li><a href="http://bmj.com" target="_blank">The BMJ</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+  <div class="image-wrap">
+  <img src=
+    
+      "http://technology.bmj.com/images/sample-image-1.jpg"
+    
+  alt="BMJ JobReviews feature image">
+  
+    <span class="image-credit">Photo Credit: <a href="http://bmj.com">BMJ</a></span>
+  
+  </div><!-- /.image-wrap -->
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+  
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="http://technology.bmj.com/images/bio-photo-2.jpg" class="bio-photo" alt="Pedro Lopez bio photo">
+
+
+  <h3 style="text-align:center;" itemprop="name">Pedro Lopez</h3>
+  <p style="text-align:center;">I love values</p>
+  <a href="mailto:plopez@bmj.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/plopez" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  
+  <a href="http://plus.google.com/++PLopez" class="author-social" target="_blank"><i class="fa fa-fw fa-google-plus-square"></i> Google+</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="http://technology.bmj.com/bmj-jobreviews/" rel="bookmark" title="BMJ JobReviews">BMJ JobReviews</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <h1 id="introduction">Introduction</h1>
+
+<p><a href="http://jobreviews.bmj.com/">Job Reviews</a> is a new BMJ product that will let doctors create reviews of medical jobs, posts, and rotations. It is designed as a mobile first responsive website and it is part of the BMJ Careers family of products.</p>
+
+<p>In this article I will describe the reasons behind this project, how we implemented it and what is next.</p>
+
+<!--more-->
+
+<h1 id="architecture">Architecture</h1>
+
+<p>Job Reviews is a combination of two different modules (see Figure 1). As a result we have a small SOA (Service Oriented Architecture):</p>
+
+<ul>
+  <li><strong>Back-end</strong>: exposes the data and functionality as an API following the HAL specification [HALSpec].</li>
+  <li><strong>Front-end</strong>: user interface that communicates with the back-end through its API and renders the information in a responsive and user friendly way.
+<!--more--></li>
+</ul>
+
+<p><a href="http://blogs.bmj.com/technology/files/2014/09/Tech-Blog-Job-Reviews.jpg"><img src="http://blogs.bmj.com/technology/files/2014/09/Tech-Blog-Job-Reviews.jpg" alt="Tech Blog - Job Reviews" /></a></p>
+
+<p>Figure 1. Overview of the Architecture of Job Reviews</p>
+
+<p>There are many new technologies involved in both modules. Some of them were never used before at the BMJ, including the latest version of Node.js, 0.11.x at the current date.</p>
+
+<p>These are the most relevant ones:</p>
+
+<ul>
+  <li>
+    <p><strong>Back-end</strong>:</p>
+
+    <ul>
+      <li>
+        <p>Node.js [Node]: platform built on Chrome’s JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.</p>
+
+        <pre><code>*   Co [Co]: Generator based flow-control goodness for Node.js and the browser, using thunks or promises, letting you write non-blocking code in a nice-ish way. *   Koa [Koa]: Koa is a new web framework designed by the team behind Express, which aims to be a smaller, more expressive, and more robust foundation for web applications and APIs. Through leveraging generators Koa allows you to ditch callbacks and greatly increase error-handling.
+</code></pre>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Front-end</strong>:</p>
+
+    <ul>
+      <li>AngularJS [Angular]: AngularJS is an open-source web application framework, maintained by Google and community, that assists with creating single-page applications, one-page web applications that only require HTML, CSS, and JavaScript on the client side.
+We also used Gulp [Gulp] for building and Mocha[Mocha] and Protractor [Protractor] for testing the back-end and front-end respectively.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>We created a Continuous Delivery [CD] pipeline that we used as part of our continuous integration and release strategies. This let us validate our code very often and put new features into production automatically very easily. Given that we built this product following a BDD/TDD approach, this was fundamental in order to achieve our quality goals.</p>
+
+<p>In addition, we made use of Vagrant [Vagrant] to box up everything in a reusable Linux-based container.</p>
+
+<h1 id="development-process">Development process</h1>
+
+<p>Job Reviews was built up in our Co-Lab laboratory were a study was conducted in order to validate the need for the tool and the interest of the medical community. It was decided to tackle this project as a mobile first website in order to make the most of the new trends in usability and UX (User Experience).</p>
+
+<p>Once this initial work was done, the project was handed to a Scrum team in the Technology department that followed an agile iterative approach to build the product.</p>
+
+<p>The process began with an Impact Mapping [IMap] session to make sure everybody was on the same page.</p>
+
+<p>“Impact mapping is a strategic planning technique that prevents organisations from getting lost while building products and delivering projects, by clearly communicating assumptions, helping teams align their activities with overall business objectives and make better roadmap decisions.”</p>
+
+<p>Following the TDD principle “write the tests first” a high quality product was built and released to production through a Continuous Delivery pipeline created in a Jenkins CI (Continuous Integration) server.</p>
+
+<p>BDD was used in the front-end module in order to collaborate with the product owner and other domain experts. As a result we all got a shared understanding of the domain model while creating a collection of feature descriptions to be used as both a development guide and as a suite of automated tests scripts.</p>
+
+<p>The Scrum team coordinated with the Operations team to set up the load-balanced servers and the deployment scripts.</p>
+
+<p>We used the GitFlow convention as our branching model [GitFlow].</p>
+
+<h1 id="mvp">MVP</h1>
+
+<p>After a few pre-releases, we finally released the first MVP (Minimum Viable Product) in beta [JR]  (see Figure 2), which is accessible from the BMJ Careers site [Careers].</p>
+
+<p><img src="http://blogs.bmj.com/technology/files/2014/09/mvp.jpg" alt="mvp" /></p>
+
+<p>Figure 2. Evolution of the Job Reviews UI</p>
+
+<p>This first version includes the following features:</p>
+
+<ul>
+  <li>Search for Hospitals and LETBs: as the user types in the name of a hospital or LETB he will receive suggestions. If the input is not descriptive enough to narrow down the results to less than 10 items, the user will be given a “Show more” option to get to a results page in order to browse all the matching results.</li>
+  <li>Inspect hospital details: once the user gets to the relevant hospital details page, information of that hospital will be displayed, such as address and contact details when available, and previous reviews and statistics.</li>
+  <li>Submit a review: on the hospital details page, the user will be able to submit his own review. It will be posted anonymously. The user will need to verify his identity via a Facebook account or an email address.</li>
+</ul>
+
+<h1 id="whats-next">What’s next</h1>
+
+<p>The next step in the roadmap is to let the users decide the future of this product. It will be available as a beta for a period of time, during which we will gather user feedback.</p>
+
+<p>Some improvements we already have in mind include:</p>
+
+<ul>
+  <li>Additional search criteria such as by location, by postcode or by score.</li>
+  <li>Additional sign up mechanisms including Twitter or Google+.
+So the very next thing is spread the word and get as much feedback as possible.</li>
+</ul>
+
+<h1 id="references">References</h1>
+
+<ul>
+  <li>[<a href="http://stateless.co/hal_specification.html">HALSpec</a>] HAL Specification</li>
+  <li>[<a href="http://nodejs.org/">Node</a>] Node.js official site</li>
+  <li>[<a href="https://github.com/visionmedia/co">Co</a>] Co repository in GitHub</li>
+  <li>[<a href="http://koajs.com/">Koa</a>] Koa official site</li>
+  <li>[<a href="https://angularjs.org/">Angular</a>] AngularJS official site</li>
+  <li>[<a href="http://gulpjs.com/">Gulp</a>] Gulp official site</li>
+  <li>[<a href="http://visionmedia.github.io/mocha/">Mocha</a>] Mocha official site</li>
+  <li>[<a href="http://angular.github.io/protractor/#/">Protractor</a>] Protractor official site</li>
+  <li>[<a href="http://continuousdelivery.com/">CD</a>] Blog about Continuos Delivery</li>
+  <li>[<a href="http://www.vagrantup.com/">Vagrant</a>] Vagrant official site</li>
+  <li>[<a href="http://www.impactmapping.org/">IMap</a>] Impact Mapping official site</li>
+  <li>[<a href="http://nvie.com/posts/a-successful-git-branching-model/">GitFlow</a>] Blog post about GitFlow</li>
+  <li>[<a href="http://jobreviews.bmj.com/">JR</a>] BMJ Careers - Job Reviews</li>
+  <li>[<a href="http://careers.bmj.com/">Careers</a>] BMJ Careers site</li>
+</ul>
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://technology.bmj.com/bmj-jobreviews/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://technology.bmj.com/bmj-jobreviews/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://technology.bmj.com/bmj-jobreviews/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        <p class="byline"><strong>BMJ JobReviews</strong> was published on <time datetime="2014-09-18T00:00:00+01:00">September 18, 2014</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://technology.bmj.com/posts/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://technology.bmj.com/switch-to-google/" title="BMJ switch to Google Apps">BMJ switch to Google Apps</a></li>
+    
+      <li><a href="http://technology.bmj.com/learning-AB/" title="BMJ Learning A/B Testing">BMJ Learning A/B Testing</a></li>
+    
+      <li><a href="http://technology.bmj.com/every-sprint-scared/" title="Every sprint is sacred">Every sprint is sacred</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  <footer>
+    
+
+<span>&copy; 2015 BMJTech. Powered by <a href="http://jekyllrb.com">Jekyll</a> with help from the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a>.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://technology.bmj.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://technology.bmj.com/assets/js/scripts.min.js"></script>
+
+
+  
+	        
+
+</body>
+</html>
