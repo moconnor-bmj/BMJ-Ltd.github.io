@@ -19,11 +19,9 @@ If `jekyll build` and `jekyll serve` throw errors you may have to run Jekyll wit
 >
 >However, this is unreliable and is the source of considerable pain. Even if it looks like it works, it may not work in the future or on another machine.
 
-{% highlight text %}
-bundle exec jekyll build
+  bundle exec jekyll build
 
-bundle exec jekyll serve
-{% endhighlight %}
+  bundle exec jekyll serve
 
 ---
 
