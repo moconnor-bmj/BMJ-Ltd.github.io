@@ -1,16 +1,3 @@
----
-layout: page
-title: Theme Setup
-modified: 2014-07-31T13:23:02.362000-04:00
-excerpt: "Instructions on how to install the BMJ Tech Jekyll theme."
-image:
-  feature: sample-image-3.jpg
-  credit: BMJ
-  creditlink: http://bmj.com
----
-
-{% include _toc.html %}
-
 ## Installation
 
 The Tech site site requires [Jekyll](http://jekyllrb.com/) 2.2+. Make sure to run `gem update jekyll` if you aren't on the latest version or `gem install jekyll` if this is your first time installing it.
